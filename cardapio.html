@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete ADS</title>
+    <link rel="stylesheet" href="estilos-cardapio.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <h1>🍔 Lanchonete ADS</h1>
+    
+        <!-- Agrupamos os botões da direita em uma div para organizar melhor -->
+        <div style="display: flex; gap: 15px; align-items: center;">
+        
+            <div class="info-carrinho" id="abrir-carrinho" style="cursor: pointer;">
+                🛒 Carrinho: <span id="contador-itens">0</span> itens
+            </div>
+
+            <!-- NOVO CÓDIGO: Botão que aponta de volta para o index.html -->
+            <a href="index.html" class="btn-sair">Sair</a>
+
+        </div>
+    </header>
+    <main>
+        <h2>Lanches</h2>
+
+        <section class="vitrine-grid">
+            <article class="card-produto">
+                <img src="imagens/hamburguer.jpg" alt="X-Burguer Clássico"
+                     class="imagem-produto">
+                <div class="conteudo-card">
+                    <h3>X-Burguer Clássico</h3>
+                    <p>Pão brioche, hambúrguer artesanal de 160g e queijo cheddar.</p>
+                    <span class="preco-destaque">R$ 28,00</span>
+                    <button class="btn-adicionar"
+                            data-nome="X-Burguer Clássico" data-preco="28">
+                        Adicionar
+                    </button>
+                </div>
+            </article>
+       
+            <article class="card-produto">
+                <img src="imagens/Bolinhas.jpg" alt="Bolinhas"
+                     class="imagem-produto">
+                <div class="conteudo-card">
+                    <h3>Bolinhas</h3>
+                    <p>Bolinhas crocantes de queijo ou peixe.</p>
+                    <span class="preco-destaque">R$ 10,00</span>
+                    <button class="btn-adicionar"
+                            data-nome="Bolinhas" data-preco="12">
+                        Adicionar
+                    </button>
+                </div>
+            </article>
+           
+            <article class="card-produto">
+                <img src="imagens/pizza.jpg" alt="Pizza"
+                     class="imagem-produto">
+                <div class="conteudo-card">
+                    <h3>Pizza</h3>
+                    <p>Fatia de pizza(calabresa, mussarela, frango c/catupiry, portuguesa ou nordestina).</p>
+                    <span class="preco-destaque">R$ 6,00</span>
+                    <button class="btn-adicionar"
+                            data-nome="Pizza" data-preco="6">
+                        Adicionar
+                    </button>
+                </div>
+            </article>
+               
+            <article class="card-produto">
+                <img src="imagens/panquecas.jpg" alt="Panquecas"
+                     class="imagem-produto">
+                <div class="conteudo-card">
+                    <h3>Panquecas</h3>
+                    <p>Panquecas ao molho.</p>
+                    <span class="preco-destaque">R$ 8,00</span>
+                    <button class="btn-adicionar"
+                            data-nome="Panquecas" data-preco="8">
+                        Adicionar
+                    </button>
+                </div>
+            </article>
+        
+            <article class="card-produto">
+                <img src="imagens/hotdog.jpg" alt="Cachorro-Quente"
+                     class="imagem-produto">
+                <div class="conteudo-card">
+                    <h3>Cachorro-Quente</h3>
+                    <p>Pão, salsicha, batata palha, queijo ralado e molho da casa.</p>
+                    <span class="preco-destaque">R$ 12,00</span>
+                    <button class="btn-adicionar"
+                            data-nome="Panquecas" data-preco="8">
+                        Adicionar
+                    </button>
+                </div>
+            </article>
+
+            <article class="card-produto">
+                <img src="imagens/batata.jpg" alt="Batata-Frita"
+                     class="imagem-produto">
+                <div class="conteudo-card">
+                    <h3>Batata-Frita</h3>
+                    <p>Porção de batatas fritas 500g c/molho rosê.</p>
+                    <span class="preco-destaque">R$ 15,00</span>
+                    <button class="btn-adicionar"
+                            data-nome="Panquecas" data-preco="15">
+                        Adicionar
+                    </button>
+                </div>
+            </article>
+       </section>
+        
+        <h2>Bebidas</h2>
+
+        <section class="vitrine-grid grid-bebidas">
+            <article class="card-produto">
+                <img src="imagens/refrigerante.jpg" alt="Refrigerante"
+                     class="imagem-produto">
+                <div class="conteudo-card">
+                    <h3>Refrigerante</h3>
+                    <p>Delrio, Pepsi, Grapette ou Guaraná (latinha).</p>
+                    <span class="preco-destaque">R$ 6,00</span>
+                    <button class="btn-adicionar btn-bebida"
+                            data-nome="Refrigerante" data-preco="6">
+                        Adicionar
+                    </button>
+                </div>
+            </article>
+
+            <article class="card-produto">
+                <img src="imagens/suco.jpg" alt="Suco Natural" class="imagem-produto">
+                <div class="conteudo-card">
+                    <h3>Suco Natural</h3>
+                    <p>Maracujá, acerola, abacaxi ou laranja (copo 400ml).</p>
+                    <span class="preco-destaque">R$ 6,00</span>
+                    <button class="btn-adicionar btn-bebida"
+                            data-nome="Suco Natural" data-preco="6">
+                        Adicionar
+                    </button>
+                </div>
+            </article>
+
+            <article class="card-produto">
+                <img src="imagens/agua.jpg" alt="Água Mineral"
+                     class="imagem-produto">
+                <div class="conteudo-card">
+                    <h3>Água Mineral</h3>
+                    <p>Água mineral 350ml.</p>
+                    <span class="preco-destaque">R$ 3,00</span>
+                    <button class="btn-adicionar btn-bebida"
+                            data-nome="Água Mineral" data-preco="3">
+                        Adicionar
+                    </button>
+                </div>
+            </article>
+        
+            <article class="card-produto">
+                <img src="imagens/cafe.jpg" alt="Café"
+                     class="imagem-produto">
+                <div class="conteudo-card">
+                    <h3>Café</h3>
+                    <p>Xícara de café com leite ou preto.</p>
+                    <span class="preco-destaque">R$ 3,00</span>
+                    <button class="btn-adicionar btn-bebida"
+                            data-nome="Água Mineral" data-preco="3">
+                        Adicionar
+                    </button>
+                </div>
+            </article>        
+        </section>
+    </main>
+    <!-- O Carrinho Lateral -->
+    <aside id="sidebar-carrinho" class="carrinho-oculto">
+        <div class="carrinho-cabecalho">
+            <h2>Seu Pedido</h2>
+            <button id="fechar-carrinho" class="btn-fechar">X</button>
+        </div>
+    
+        <!-- Aqui os itens serão injetados pelo JS depois -->
+        <ul id="lista-carrinho" class="carrinho-itens"></ul>
+
+        <div class="carrinho-rodape">
+            <h3>Total: R$ <span id="valor-total">0,00</span></h3>
+            <button class="btn-finalizar">Finalizar Compra</button>
+        </div>
+    </aside>
+
+    <script src="interacoes.js"></script>
+</body>
+</html>

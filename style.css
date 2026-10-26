@@ -1,0 +1,126 @@
+
+/* Reset de formatação nativa */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Fundo e centralização */
+.container-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #d4bd92;
+}
+
+/* Cartão de cadastro */
+.card-login {
+    background-color: #332018;
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(51, 32, 24, 0.18);
+    width: 100%;
+    max-width: 400px;
+    border-top: 5px solid #F2B84B;
+}
+
+/* Título */
+.card-login h1 {
+    color: #F2B84B;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Texto de apresentação */
+.card-login p {
+    text-align: center;
+    color: #FFF8ED;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Organização dos campos */
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+/* Rótulos */
+label {
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #FFF8ED;
+}
+
+/* Campos de texto */
+input {
+    padding: 12px;
+    border: 2px solid #D8C6B5;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    color: #332018;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Destaque ao selecionar um campo */
+input:focus {
+    border-color: #F2B84B;
+    box-shadow: 0 0 0 3px rgba(242, 184, 75, 0.2);
+}
+
+/* Botão de cadastro */
+button {
+    width: 100%;
+    padding: 13px;
+    background-color: #8B2E24;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px;
+}
+
+/* Efeito ao passar o mouse */
+button:hover {
+    background-color: #A63B2E;
+}
+
+/* Efeito ao clicar */
+button:active {
+    transform: scale(0.98);
+}
+
+/* Mensagem de retorno */
+#mensagem {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Mensagem de erro */
+#mensagem.erro {
+    color: #FF9B91;
+}
+
+/* Mensagem de sucesso */
+#mensagem.sucesso {
+    color: #A8E6B0;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 480px) {
+    .card-login {
+        padding: 28px 22px;
+    }
+}

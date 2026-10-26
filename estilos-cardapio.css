@@ -1,0 +1,215 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* --- CONFIGURAÇÕES GERAIS --- */
+:root {
+    --cor-primaria: #d4bd92;
+    --cor-secundaria: #f7deb0;
+    --cor-fundo: #d4bd92;
+    --cor-texto: #332018;
+    --cor-card: #f7e9cf;
+    --sombra-padrao: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+}
+
+/* --- VITRINE DE PRODUTOS --- */
+.vitrine-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-produto {
+    background-color: var(--cor-card);
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--sombra-padrao);
+    transition: transform 0.3s ease;
+}
+
+.card-produto:hover {
+    transform: translateY(-8px);
+}
+
+/* Imagens padronizadas */
+.imagem-produto {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    display: block;
+    background-color: #f5cea1;
+}
+
+.conteudo-card {
+    padding: 15px;
+}
+
+main h2 {
+    margin: 25px 0 15px;
+}
+
+/* --- BOTÕES DE ADICIONAR --- */
+.btn-adicionar {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-adicionar:hover {
+    background-color: #218838;
+}
+
+/* Botões das bebidas */
+.btn-adicionar.btn-bebida {
+    background-color: #007bff;
+}
+
+.btn-adicionar.btn-bebida:hover {
+    background-color: #0056b3;
+}
+
+/* --- CARRINHO LATERAL --- */
+#sidebar-carrinho {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100vh;
+    background-color: var(--cor-card);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Carrinho escondido */
+.carrinho-oculto {
+    transform: translateX(100%);
+}
+
+/* Carrinho visível */
+.carrinho-aberto {
+    transform: translateX(0);
+}
+
+/* Cabeçalho do carrinho */
+.carrinho-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--cor-secundaria);
+    color: #000;
+}
+
+.btn-fechar {
+    background: transparent;
+    color: #000;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Lista de itens */
+.carrinho-itens {
+    padding: 20px;
+    list-style: none;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.carrinho-itens li {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    color: var(--cor-texto);
+    font-weight: 600;
+}
+
+/* Rodapé do carrinho */
+.carrinho-rodape {
+    padding: 20px;
+    border-top: 2px solid #eee;
+}
+
+.btn-finalizar {
+    width: 100%;
+    padding: 15px;
+    background-color: #15803d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn-finalizar:hover {
+    background-color: #166534;
+}
+
+/* --- BOTÃO DE SAIR --- */
+.btn-sair {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #e63946;
+    padding: 8px 15px;
+    border-radius: 12px;
+}
+
+.btn-sair:hover {
+    background-color: #d62828;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .vitrine-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 20px 15px;
+        gap: 15px;
+    }
+
+    #sidebar-carrinho {
+        width: 100%;
+    }
+
+    .imagem-produto {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .vitrine-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .imagem-produto {
+        height: 250px;
+    }
+}
