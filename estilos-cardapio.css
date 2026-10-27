@@ -22,6 +22,22 @@ body {
     margin: 0;
 }
 
+.info-carrinho {
+    color: white;
+    font-weight: bold;
+    background-color: #4fa00d;
+    border: 3px solid #4fa00d;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.info-carrinho:hover {
+    background-color: #4fa00d;
+}
+
+
 /* --- VITRINE DE PRODUTOS --- */
 .vitrine-grid {
     display: grid;
